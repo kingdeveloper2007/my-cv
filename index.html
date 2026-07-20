@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Name - IT & Mobile Developer</title>
+  <style>
+    :root {
+      --bg-color: #0f172a;
+      --card-bg: #1e293b;
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+      --accent: #38bdf8;
+      --accent-gold: #fbbf24;
+      --border: #334155;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background-color: var(--bg-color);
+      color: var(--text-main);
+      line-height: 1.6;
+      padding: 2rem 1rem;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    /* Header */
+    header {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 2.5rem;
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      color: var(--text-main);
+      margin-bottom: 0.5rem;
+    }
+
+    header h2 {
+      font-size: 1.25rem;
+      color: var(--accent);
+      font-weight: 500;
+      margin-bottom: 1.5rem;
+    }
+
+    .contact-links {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+    }
+
+    .contact-links a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.95rem;
+      transition: color 0.2s;
+    }
+
+    .contact-links a:hover {
+      color: var(--accent);
+    }
+
+    /* Sections */
+    section {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    section h3 {
+      font-size: 1.4rem;
+      color: var(--accent);
+      border-bottom: 2px solid var(--border);
+      padding-bottom: 0.5rem;
+      margin-bottom: 1.25rem;
+    }
+
+    /* Skills Grid */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .skill-category h4 {
+      color: var(--text-main);
+      margin-bottom: 0.75rem;
+    }
+
+    .skill-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .tag {
+      background: rgba(56, 189, 248, 0.1);
+      color: var(--accent);
+      border: 1px solid rgba(56, 189, 248, 0.2);
+      padding: 0.35rem 0.85rem;
+      border-radius: 20px;
+      font-size: 0.85rem;
+    }
+
+    .tag-gold {
+      background: rgba(251, 191, 36, 0.1);
+      color: var(--accent-gold);
+      border: 1px solid rgba(251, 191, 36, 0.2);
+    }
+
+    /* Achievements Timeline */
+    .achievement-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.75rem 0;
+      border-bottom: 1px dashed var(--border);
+    }
+
+    .achievement-item:last-child {
+      border-bottom: none;
+    }
+
+    .achievement-title {
+      font-weight: 600;
+      color: var(--text-main);
+    }
+
+    .achievement-location {
+      font-size: 0.85rem;
+      color: var(--accent-gold);
+    }
+
+    footer {
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 0.85rem;
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    
+    <!-- HEADER -->
+    <header>
+      <h1>Your Name</h1>
+      <h2>IT & Software Engineer | Mobile Developer</h2>
+      <div class="contact-links">
+        <a href="mailto:your.email@example.com">email@example.com</a>
+        <span>•</span>
+        <a href="https://github.com/yourusername" target="_blank">GitHub Profile</a>
+        <span>•</span>
+        <a href="https://linkedin.com/in/yourprofile" target="_blank">LinkedIn</a>
+      </div>
+    </header>
+
+    <!-- PROFESSIONAL SUMMARY -->
+    <section>
+      <h3>Professional Summary</h3>
+      <p style="color: var(--text-muted);">
+        Versatile technical professional with strong core knowledge in IT infrastructure, Linux system administration, Python scripting, and network configuration. Highly proficient in modern native Android engineering (Kotlin, Jetpack Compose, MVI). Fuses deep analytical problem-solving skills—backed by high-level competitive chess accolades—with hands-on system and application development experience.
+      </p>
+    </section>
+
+    <!-- TECHNICAL SKILLS -->
+    <section>
+      <h3>Technical Knowledge & Skills</h3>
+      <div class="skills-grid">
+        
+        <!-- IT & Systems -->
+        <div class="skill-category">
+          <h4>IT & Infrastructure</h4>
+          <div class="skill-tags">
+            <span class="tag">Linux</span>
+            <span class="tag">CompTIA A+ Knowledge</span>
+            <span class="tag">Networking (TCP/IP, Routing)</span>
+            <span class="tag">Python</span>
+          </div>
+        </div>
+
+        <!-- Android Development -->
+        <div class="skill-category">
+          <h4>Software & Android Engineering</h4>
+          <div class="skill-tags">
+            <span class="tag">Native Android Development</span>
+            <span class="tag">Advanced Kotlin</span>
+            <span class="tag">Jetpack Compose</span>
+            <span class="tag">MVI Architecture</span>
+            <span class="tag">Room Database</span>
+            <span class="tag">Firebase Storage & Firestore</span>
+            <span class="tag">WorkManager</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- PERSONAL ACHIEVEMENTS -->
+    <section>
+      <h3 style="color: var(--accent-gold);">Honors & Achievements</h3>
+      
+      <div class="achievement-item">
+        <div>
+          <span class="achievement-title">Chess International Master (IM)</span>
+        </div>
+        <span class="achievement-location">Awarded 2022</span>
+      </div>
+
+      <div class="achievement-item">
+        <div>
+          <span class="achievement-title">1st Place – African U16 Championship</span>
+        </div>
+        <span class="achievement-location">Egypt, 2023</span>
+      </div>
+
+      <div class="achievement-item">
+        <div>
+          <span class="achievement-title">1st Place – African U18 Championship</span>
+        </div>
+        <span class="achievement-location">Zambia, 2022</span>
+      </div>
+
+      <div class="achievement-item">
+        <div>
+          <span class="achievement-title">3rd Place – African U14 Championship</span>
+        </div>
+        <span class="achievement-location">Ghana, 2021</span>
+      </div>
+
+    </section>
+
+  </div>
+
+  <footer>
+    <p>&copy; 2026 Your Name. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
