@@ -8,6 +8,7 @@
         :root {
             --primary: #0f172a;
             --accent: #2563eb;
+            --accent-light: #eff6ff;
             --text: #334155;
             --text-dark: #0f172a;
             --bg: #f8fafc;
@@ -30,72 +31,138 @@
         }
 
         .container {
-            max-width: 800px;
+            max-width: 850px;
             margin: 0 auto;
             background: var(--card-bg);
-            padding: 2.5rem;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            padding: 3rem;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.01);
             border: 1px solid var(--border);
         }
 
+        /* Header / Contact */
         header {
             border-bottom: 2px solid var(--border);
-            padding-bottom: 1.5rem;
-            margin-bottom: 1.5rem;
+            padding-bottom: 2rem;
+            margin-bottom: 2rem;
         }
 
         h1 {
             color: var(--text-dark);
-            font-size: 2rem;
-            margin-bottom: 0.5rem;
+            font-size: 2.25rem;
+            font-weight: 800;
+            letter-spacing: -0.025em;
+            margin-bottom: 1rem;
         }
 
         .contact-info {
             display: flex;
-            flex-direction: column;
-            gap: 0.25rem;
+            flex-wrap: wrap;
+            gap: 1.25rem;
             font-size: 0.95rem;
         }
 
-        .contact-info a {
-            color: var(--accent);
-            text-decoration: none;
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+            color: var(--text);
         }
 
-        .contact-info a:hover {
+        .contact-item a {
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .contact-item a:hover {
             text-decoration: underline;
         }
 
+        /* Sections */
         section {
-            margin-bottom: 1.75rem;
+            margin-bottom: 2.25rem;
         }
 
         h2 {
             color: var(--text-dark);
-            font-size: 1.2rem;
+            font-size: 1.25rem;
+            font-weight: 700;
             text-transform: uppercase;
             letter-spacing: 0.05em;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        h2::after {
+            content: "";
+            flex: 1;
+            height: 1px;
+            background-color: var(--border);
+            margin-left: 0.5rem;
+        }
+
+        p.objective {
+            font-size: 1.05rem;
+            color: var(--text);
+            background: var(--accent-light);
+            padding: 1rem 1.25rem;
+            border-left: 4px solid var(--accent);
+            border-radius: 0 8px 8px 0;
+        }
+
+        /* Lists */
+        .styled-list {
+            list-style: none;
+        }
+
+        .styled-list li {
+            position: relative;
+            padding-left: 1.5rem;
             margin-bottom: 0.75rem;
-            border-bottom: 1px solid var(--border);
-            padding-bottom: 0.25rem;
+            font-size: 1rem;
+            color: var(--text-dark);
         }
 
-        ul {
-            list-style-type: square;
-            padding-left: 1.25rem;
+        .styled-list li::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0.6rem;
+            width: 8px;
+            height: 8px;
+            background-color: var(--accent);
+            border-radius: 50%;
         }
 
-        li {
-            margin-bottom: 0.4rem;
+        /* Soft Skills Badges */
+        .soft-skills-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+        }
+
+        .soft-skill-badge {
+            background: var(--accent-light);
+            color: var(--accent);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.95rem;
+            font-weight: 600;
         }
 
         @media (max-width: 600px) {
             .container {
-                padding: 1.25rem;
+                padding: 1.5rem;
             }
             h1 {
-                font-size: 1.5rem;
+                font-size: 1.75rem;
+            }
+            .contact-info {
+                flex-direction: column;
+                gap: 0.5rem;
             }
         }
     </style>
@@ -107,22 +174,33 @@
         <header>
             <h1>Mohamed Hany Kamal</h1>
             <div class="contact-info">
-                <div><strong>Email:</strong> <a href="mailto:hisready12@gmail.com">hisready12@gmail.com</a></div>
-                <div><strong>Mobile number:</strong> <a href="tel:+201066838968">+201066838968</a></div>
-                <div><strong>GitHub:</strong> <a href="https://github.com/kingdeveloper2007" target="_blank">https://github.com/kingdeveloper2007</a></div>
+                <div class="contact-item">
+                    <strong>Email:</strong>
+                    <a href="mailto:hisready12@gmail.com">hisready12@gmail.com</a>
+                </div>
+                <div class="contact-item">
+                    <strong>Mobile:</strong>
+                    <a href="tel:+201066838968">+201066838968</a>
+                </div>
+                <div class="contact-item">
+                    <strong>GitHub:</strong>
+                    <a href="https://github.com/kingdeveloper2007" target="_blank">https://github.com/kingdeveloper2007</a>
+                </div>
             </div>
         </header>
 
         <!-- 2) Objective -->
         <section>
             <h2>Objective</h2>
-            <p>My objective is to gain practical experience in telecom engineering, R&D department.</p>
+            <p class="objective">
+                My objective is to gain practical experience in telecom engineering, R&D department.
+            </p>
         </section>
 
         <!-- 3) Projects -->
         <section>
             <h2>Projects</h2>
-            <ul>
+            <ul class="styled-list">
                 <li>Developed a game in C++ (2026)</li>
                 <li>Created a sensor detection beard-feeder (2026)</li>
                 <li>Developed an android task app (2026)</li>
@@ -132,16 +210,16 @@
 
         <!-- 4) IT skills -->
         <section>
-            <h2>IT skills</h2>
-            <ul>
+            <h2>IT Skills</h2>
+            <ul class="styled-list">
                 <li>Basic knowledge about Linux</li>
             </ul>
         </section>
 
         <!-- 5) Programming and development -->
         <section>
-            <h2>Programming and development</h2>
-            <ul>
+            <h2>Programming and Development</h2>
+            <ul class="styled-list">
                 <li>Advanced Kotlin features</li>
                 <li>Jetpack Compose</li>
                 <li>MVI</li>
@@ -153,7 +231,7 @@
         <!-- 6) Personal Achievements -->
         <section>
             <h2>Personal Achievements</h2>
-            <ul>
+            <ul class="styled-list">
                 <li>Won African U16 Chess Championship, Egypt (2023)</li>
                 <li>Won Chess International Master Title (IM) 2022</li>
                 <li>Won African U18 Chess Championship, Zambia (2022)</li>
@@ -165,10 +243,10 @@
         <!-- 7) Soft Skills -->
         <section>
             <h2>Soft Skills</h2>
-            <ul>
-                <li>Great passion for self-development and continuous learning</li>
-                <li>Can work under preasure</li>
-            </ul>
+            <div class="soft-skills-list">
+                <span class="soft-skill-badge">Great passion for self-development and continuous learning</span>
+                <span class="soft-skill-badge">Can work under preasure</span>
+            </div>
         </section>
     </div>
 
